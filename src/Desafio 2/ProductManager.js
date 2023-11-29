@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from "fs";
 
 class ProductManager {
     constructor(path) {
@@ -47,6 +47,7 @@ class ProductManager {
             const parsedData = JSON.parse(products);
             return parsedData;
         } catch (error) {
+            console.error('Error al obtener productos:', error);
             return [];
         }
     }
@@ -56,8 +57,9 @@ class ProductManager {
         const productId = products.find(product => product.id === id);
         if (productId) {
             console.log(productId);
+            return productId;
         } else {
-            console.error("El producto no fue encontrado o no existe");
+            return({error:`El producto con el ID ${id} no fue encontrado o no existe`});
         }
     }
 
@@ -74,10 +76,12 @@ class ProductManager {
     }
 }
 
+export default ProductManager
+
 const test = async () => {
     const productManager = new ProductManager("./products.json");
     let data = await productManager.getProducts();
-/*     const product1 = {
+    const product1 = {
         title: "Pepsi",
         description: "Bebida gasificada",
         price: 600,
@@ -93,8 +97,6 @@ const test = async () => {
         code: "A2",
         stock: 27
     }
-    await productManager.addProducts(product1);
-    await productManager.addProducts(product2); */
     const product3 = {
         title: "Sprite",
         description: "Bebida gasificada",
@@ -103,9 +105,40 @@ const test = async () => {
         code: "A3",
         stock: 37
     }
-    productManager.getProductById(2);
+    const product4 = {
+        title: "Cunington",
+        description: "Bebida gasificada",
+        price: 400,
+        thumnail: "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/fotos/b/0000000020/2183_1.jpg",
+        code: "A4",
+        stock: 10
+    }
+    const product5 = {
+        title: "7up",
+        description: "Bebida gasificada",
+        price: 550,
+        thumnail: "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/fotos/b/0000000020/2183_1.jpg",
+        code: "A5",
+        stock: 45
+    }
+    const product6 = {
+        title: "Fanta",
+        description: "Bebida gasificada",
+        price: 760,
+        thumnail: "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/fotos/b/0000000020/2183_1.jpg",
+        code: "A6",
+        stock: 89
+    }
+/*     await productManager.addProducts(product1);
+    await productManager.addProducts(product2);
+    await productManager.addProducts(product3);
+    await productManager.addProducts(product4);
+    await productManager.addProducts(product5);
+    await productManager.addProducts(product6); */
+/*     console.log(data); */
+/*     productManager.getProductById(3); */
 /*     productManager.updateProduct(product3, 2); */
-    productManager.deleteProduct(1);
+/*     productManager.deleteProduct(1); */
 }
 
 test();

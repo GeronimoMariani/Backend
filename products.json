@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "Pepsi",
+        "description": "Bebida gasificada",
+        "price": 600,
+        "thumnail": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/fotos/b/0000000020/2183_1.jpg",
+        "code": "A1",
+        "stock": 27
+    },
+    {
+        "id": 2,
+        "title": "Coca",
+        "description": "Bebida gasificada",
+        "price": 600,
+        "thumnail": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/fotos/b/0000000020/2183_1.jpg",
+        "code": "A2",
+        "stock": 27
+    },
+    {
+        "id": 3,
+        "title": "Sprite",
+        "description": "Bebida gasificada",
+        "price": 700,
+        "thumnail": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/fotos/b/0000000020/2183_1.jpg",
+        "code": "A3",
+        "stock": 37
+    },
+    {
+        "id": 4,
+        "title": "Cunington",
+        "description": "Bebida gasificada",
+        "price": 400,
+        "thumnail": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/fotos/b/0000000020/2183_1.jpg",
+        "code": "A4",
+        "stock": 10
+    },
+    {
+        "id": 5,
+        "title": "7up",
+        "description": "Bebida gasificada",
+        "price": 550,
+        "thumnail": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/fotos/b/0000000020/2183_1.jpg",
+        "code": "A5",
+        "stock": 45
+    },
+    {
+        "id": 6,
+        "title": "Fanta",
+        "description": "Bebida gasificada",
+        "price": 760,
+        "thumnail": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/fotos/b/0000000020/2183_1.jpg",
+        "code": "A6",
+        "stock": 89
+    }
+]
